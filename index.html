@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Number Generator</title>
+<style>
+body{font-family:Arial;background:#eef2ff;text-align:center;padding:25px}
+main{max-width:450px;margin:auto;background:white;padding:30px;border-radius:15px}
+input{width:100%;padding:12px;margin:10px 0;box-sizing:border-box}
+button{width:100%;padding:14px;background:#4f46e5;color:white;border:0;border-radius:8px;cursor:pointer}
+#result{font-size:45px;font-weight:bold;color:#4338ca;margin:25px 0;overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<main>
+<h1>Random Number Generator</h1>
+<p>Generate a random number within your chosen range.</p>
+<label>Minimum Number</label>
+<input id="min" type="number" value="1">
+<label>Maximum Number</label>
+<input id="max" type="number" value="100">
+<button onclick="generate()">Generate Number</button>
+<div id="result">--</div>
+</main>
+<script>
+function generate(){
+ const min=Math.ceil(Number(document.getElementById("min").value));
+ const max=Math.floor(Number(document.getElementById("max").value));
+ const out=document.getElementById("result");
+ if(min>max||!Number.isSafeInteger(min)||!Number.isSafeInteger(max)||max-min>1000000000){
+  out.textContent="Invalid range";
+  return;
+ }
+ out.textContent=Math.floor(Math.random()*(max-min+1))+min;
+}
+generate();
+</script>
+</body>
+</html>

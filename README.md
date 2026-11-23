@@ -1,23 +1,21 @@
-# Random Number Generator
+## Random Number Generation Guide
 
-A utility for generating random integers within a chosen range.
+This application generates random numbers
+within a user-defined range.
 
-## Features
+### Main Features
+- Minimum value input
+- Maximum value input
+- Random number generation
+- Input validation
 
-- Custom minimum
-- Custom maximum
-- Random integer generation
+### How to Use
+1. Enter the minimum value.
+2. Enter the maximum value.
+3. Generate a random number.
+4. Review the generated result.
 
-## How to Use
-
-Enter the minimum and maximum values, then generate a number.
-
-## Technologies
-
-- HTML
-- CSS
-- JavaScript
-
-## Running Locally
-
-Open `index.html` in a modern web browser.
+### Validation Guidelines
+- Minimum value should not exceed maximum value.
+- Validate numerical inputs.
+- Handle invalid ranges appropriately.

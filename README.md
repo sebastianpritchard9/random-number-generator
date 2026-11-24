@@ -19,3 +19,12 @@ within a user-defined range.
 - Minimum value should not exceed maximum value.
 - Validate numerical inputs.
 - Handle invalid ranges appropriately.
+## Manual Testing Checklist
+
+- [ ] Generate values within a small known range.
+- [ ] Test a range containing a single integer.
+- [ ] Check that a minimum greater than the maximum is rejected.
+
+### Test Notes
+
+Record the observed result and any reproducible issue after running the tests.
